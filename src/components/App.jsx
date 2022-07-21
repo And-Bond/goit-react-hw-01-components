@@ -1,16 +1,17 @@
+import Profile from './profile/profile';
+import User from './user.json';
+import PropTypes from 'prop-types';
+
 export const App = () => {
   return (
-    <div
-      style={{
-        height: '100vh',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        fontSize: 40,
-        color: '#010101',
-      }}
-    >
-      React homework template
-    </div>
+    <Profile
+      username={User.username}
+      tag={User.tag}
+      location={User.location}
+      avatar={User.avatar}
+      followers={User.stats.followers}
+      views={User.stats.views}
+      likes={User.stats.likes}
+    />
   );
 };
