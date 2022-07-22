@@ -1,0 +1,44 @@
+ul{
+    list-style: none;
+}
+.profile{
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+}
+.description{
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.normal{
+    display: inline;
+}
+.avatar{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
+.name{
+    font-size: 30px;
+    font-weight: 700;
+}
+.tag{
+    color: gray;
+}
+.location{
+    color: gray;
+}
+.stats{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 350px;
+
+}
+.block{
+    height: 50px;
+    border: 1px solid black;
+    flex-direction: column;
+}

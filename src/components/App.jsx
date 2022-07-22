@@ -1,12 +1,22 @@
 import Profile from './profile/profile';
 import User from './user.json';
+
 import Statistics from './Statistics/statistics';
 import Data from './data.json';
+
+import FriendsList from './friendList/friendList';
+import Friends from './friends.json';
+
+import TransactionsList from './transactions/transactions';
+import transactions from './transactions.json';
+
 import PropTypes from 'prop-types';
+import './App.scss'
 
 export const App = () => {
   return (
     <>
+    {document.body.classList.add('body')}
       <Profile
         username={User.username}
         tag={User.tag}
@@ -17,6 +27,8 @@ export const App = () => {
         likes={User.stats.likes}
       />
       <Statistics title="Upload" stats={Data} />
+      <FriendsList friends={Friends} />
+      <TransactionsList items={transactions} />
     </>
   );
 };
