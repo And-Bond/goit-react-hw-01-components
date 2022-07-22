@@ -1,21 +1,22 @@
 import React from 'react';
+import styles from './friendList.module.scss'
 
 const FriendsList = ({ friends }) => {
   return (
-    <ul className="friend-list">
+    <ul className={styles.friendList}>
       {friends.map(friend => {
         return (
-          <li className="item">
+          <li className={styles.item}>
             <span
               className={`status ${friend.isOnline ? 'online' : 'offline'}`}
             ></span>
             <img
-              className="avatar"
+              className={styles.avatar}
               src={friend.avatar}
               alt="User avatar"
               width="48"
             />
-            <p className="name">{friend.name}</p>
+            <p className={styles.name}>{friend.name}</p>
           </li>
         );
       })}
