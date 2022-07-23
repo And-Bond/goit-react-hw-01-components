@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './friendList.module.scss'
+import styles from './friendList.module.scss';
 
 const FriendsList = ({ friends }) => {
   return (
@@ -8,7 +8,9 @@ const FriendsList = ({ friends }) => {
         return (
           <li className={styles.item}>
             <span
-              className={`status ${friend.isOnline ? 'online' : 'offline'}`}
+              className={`${styles.status} ${
+                friend.isOnline ? styles.online : styles.offline
+              }`}
             ></span>
             <img
               className={styles.avatar}
