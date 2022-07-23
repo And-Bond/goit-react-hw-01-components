@@ -1,5 +1,6 @@
 import React from 'react';
 import styles from './friendList.module.scss';
+import PropTypes from 'prop-types';
 
 const FriendsList = ({ friends }) => {
   return (
@@ -26,4 +27,7 @@ const FriendsList = ({ friends }) => {
   );
 };
 
+FriendsList.propTypes = {
+  friends: PropTypes.array,
+};
 export default FriendsList;

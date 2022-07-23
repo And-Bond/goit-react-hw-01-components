@@ -10,13 +10,12 @@ import Friends from './friends.json';
 import TransactionsList from './transactions/transactions';
 import transactions from './transactions.json';
 
-import PropTypes from 'prop-types';
-import './App.scss'
+import './App.scss';
 
 export const App = () => {
   return (
     <>
-    {document.body.classList.add('body')}
+      {document.body.classList.add('body')}
       <Profile
         username={User.username}
         tag={User.tag}

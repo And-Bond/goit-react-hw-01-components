@@ -1,5 +1,6 @@
 import React from 'react';
 import styles from './statistics.module.scss';
+import PropTypes from 'prop-types';
 
 const Statistics = ({ title, stats }) => {
   return (
@@ -9,7 +10,7 @@ const Statistics = ({ title, stats }) => {
       <ul className={styles.statList}>
         {stats.map(stat => {
           return (
-            <li className={styles.item} style={{backgroundColor: "red"}}>
+            <li className={styles.item} style={{ backgroundColor: 'red' }}>
               <span className={styles.label}>{stat.label} </span>
               <span className={styles.statistics}>{stat.percentage}% </span>
             </li>
@@ -20,4 +21,8 @@ const Statistics = ({ title, stats }) => {
   );
 };
 
+Statistics.propTypes = {
+  title: PropTypes.string,
+  stats: PropTypes.array
+};
 export default Statistics;

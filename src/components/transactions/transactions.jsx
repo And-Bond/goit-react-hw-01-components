@@ -1,5 +1,6 @@
 import React from 'react';
 import styles from './transactions.module.scss';
+import PropTypes from 'prop-types';
 
 const TransactionsList = ({ items }) => {
   return (
@@ -26,4 +27,7 @@ const TransactionsList = ({ items }) => {
   );
 };
 
+TransactionsList.propTypes = {
+  items: PropTypes.array,
+};
 export default TransactionsList;
