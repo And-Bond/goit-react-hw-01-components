@@ -1,21 +1,20 @@
-import Profile from './profile/profile';
+import Profile from './Profile/profile';
 import User from './user.json';
 
 import Statistics from './Statistics/statistics';
 import Data from './data.json';
 
-import FriendsList from './friendList/friendList';
+import FriendsList from './FriendList/friendList';
 import Friends from './friends.json';
 
-import TransactionsList from './transactions/transactions';
+import TransactionsList from './Transactions/transactions';
 import transactions from './transactions.json';
 
 import './App.scss';
 
 export const App = () => {
   return (
-    <>
-      {document.body.classList.add('body')}
+    <div className='body'>
       <Profile
         username={User.username}
         tag={User.tag}
@@ -25,9 +24,9 @@ export const App = () => {
         views={User.stats.views}
         likes={User.stats.likes}
       />
-      <Statistics title="Upload Stats" stats={Data} />
+      <Statistics title="Upload stats" stats={Data} />
       <FriendsList friends={Friends} />
       <TransactionsList items={transactions} />
-    </>
+      </div>
   );
 };
