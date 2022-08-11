@@ -1,13 +1,13 @@
-import Profile from './Profile/profile.jsx';
+import Profile from './profile/profile';
 import User from './user.json';
 
-import Statistics from './Statistics/statistics.jsx';
+import Statistics from './statistics/statistics';
 import Data from './data.json';
 
-import FriendsList from './FriendList/friendList.jsx';
+import FriendsList from './friendList/friendList';
 import Friends from './friends.json';
 
-import TransactionsList from './Transactions/transactions.jsx';
+import TransactionsList from './transactions/transactions';
 import transactions from './transactions.json';
 
 import './App.scss';
